@@ -12,6 +12,9 @@ namespace zd2_Kuznetsovpr_23
     {
         private Dictionary<Product, int> products;
         private ListBox _listbox;
+        private decimal allPrice;
+
+        public decimal AllPrice { get => allPrice;}
 
         public Shop(ListBox listBox)
         {
@@ -48,6 +51,7 @@ namespace zd2_Kuznetsovpr_23
                 else
                 {
                     products[product]--;
+                    allPrice += product.Price;
                 }
             }
             else

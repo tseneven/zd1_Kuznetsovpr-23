@@ -11,9 +11,8 @@ namespace zd1_Kuznetsovpr_23
     {
         static void Main(string[] args)
         {
-            Cat cat = new Cat("", 1);
 
-
+            Cat cat = null;
             while (true)
             {
                 try
@@ -29,12 +28,19 @@ namespace zd1_Kuznetsovpr_23
                         string name = Console.ReadLine();
                         Console.WriteLine("Введите вес кота");
                         double ves = Convert.ToDouble(Console.ReadLine());
-                        cat.Name = name;
-                        cat.Ves = ves;
+                        cat = new Cat(name, ves);
+                        Console.WriteLine($"Кот {name} создан");
                     }
                     if (answer == 2)
                     {
-                        cat.Meow();
+                        if (cat != null)
+                        {
+                            cat.Meow();
+                        }
+                        else
+                        {
+                            Console.WriteLine("Кот не выбран");
+                        }
                     }
                     if (answer == 3)
                     {

@@ -42,6 +42,7 @@ namespace zd1_Kuznetsovpr_23
             }
         }
 
+        // Инкапсуляция поля вес
         public double Ves 
         {
             get 
@@ -51,7 +52,7 @@ namespace zd1_Kuznetsovpr_23
             set
             {
 
-                if (ves <= 0.5)
+                if (value > 0.5)
                 {
                     ves = value;
                 }
@@ -62,12 +63,14 @@ namespace zd1_Kuznetsovpr_23
             }
         }
 
+        //Конструтор
         public Cat(string CatName, double CatVes)
         {
             Name = CatName;
             Ves = CatVes;
         }
 
+        // Метод с печатью "Мяу"
         public void Meow()
         {
             Console.WriteLine($"{name}: МЯЯЯЯЯУ!!!!");
