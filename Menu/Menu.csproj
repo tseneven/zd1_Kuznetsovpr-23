@@ -49,5 +49,19 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\zd1_Kuznetsovpr-23\zd1_Kuznetsovpr-23.csproj">
+      <Project>{ce7cf50b-2509-461b-b56c-6602a54c3a72}</Project>
+      <Name>zd1_Kuznetsovpr-23</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\zd2_Kuznetsovpr-23\zd2_Kuznetsovpr-23.csproj">
+      <Project>{1c7dac08-556b-487a-9932-ba05bd3e6b29}</Project>
+      <Name>zd2_Kuznetsovpr-23</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\zd3_Kuznetsov-pr-23\zd3_Kuznetsov-pr-23.csproj">
+      <Project>{594154f4-5810-4840-8f4d-3ac52f14aec1}</Project>
+      <Name>zd3_Kuznetsov-pr-23</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

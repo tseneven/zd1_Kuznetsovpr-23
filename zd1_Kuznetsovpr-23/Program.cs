@@ -7,9 +7,9 @@ using System.Xml.Linq;
 
 namespace zd1_Kuznetsovpr_23
 {
-    internal class Program
+    public class Program3
     {
-        static void Main(string[] args)
+        public static void Main()
         {
 
             Cat cat = null;

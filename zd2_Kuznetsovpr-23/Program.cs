@@ -6,13 +6,13 @@ using System.Windows.Forms;
 
 namespace zd2_Kuznetsovpr_23
 {
-    internal static class Program
+    public static class Program2
     {
         /// <summary>
         /// Главная точка входа для приложения.
         /// </summary>
         [STAThread]
-        static void Main()
+        public static void Main()
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);

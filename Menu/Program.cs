@@ -3,6 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using zd2_Kuznetsovpr_23;
+using zd3_Kuznetsov_pr_23;
+using static System.Net.Mime.MediaTypeNames;
+using zd1_Kuznetsovpr_23;
 
 namespace Menu
 {
@@ -14,9 +18,9 @@ namespace Menu
             {
                 Console.Clear();
                 Console.WriteLine("=== Главное меню ===");
-                Console.WriteLine("1. Работа с плейлистом");
-                Console.WriteLine("2. Демонстрация модуля 1");
-                Console.WriteLine("3. Демонстрация модуля 2");
+                Console.WriteLine("1. Работа с классом Cat");
+                Console.WriteLine("2. Работа с магазином");
+                Console.WriteLine("3. Работа с плейлистом");
                 Console.WriteLine("0. Выход");
                 Console.Write("Выберите пункт: ");
                 string input = Console.ReadLine();
@@ -24,13 +28,13 @@ namespace Menu
                 switch (input)
                 {
                     case "1":
-                        Program.Main();
+                        Program3.Main();
                         break;
                     case "2":
-                        Module1.Run();
+                        Program2.Main();
                         break;
                     case "3":
-                        Module2.Run();
+                        Program1.Main();
                         break;
                     case "0":
                         return;

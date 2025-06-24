@@ -6,16 +6,16 @@ using System.Windows.Forms;
 
 namespace zd3_Kuznetsov_pr_23
 {
-    internal static class Program
+    public static class Program1
     {
         /// <summary>
         /// Главная точка входа для приложения.
         /// </summary>
         [STAThread]
-        static void Main()
+        public static void Main()
         {
             Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
+            Application.SetCompatibleTextRenderingDefault(true);
             Application.Run(new Form1());
         }
     }
