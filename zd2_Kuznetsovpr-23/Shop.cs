@@ -21,10 +21,13 @@ namespace zd2_Kuznetsovpr_23
             _listbox = listBox;
         }
 
+        // Метод для добавления продукта в список
         public void AddProduct(Product product, int count)
         {
             products.Add(product, count);
         }
+
+        //Метод для печати всего списка
         public void WriteAllProducts()
         {
             _listbox.Items.Clear();
@@ -34,6 +37,8 @@ namespace zd2_Kuznetsovpr_23
                 _listbox.Items.Add(product.Key.GetInfo()+" Количество: "+ product.Value);
             }
         }
+        
+        // Метод для создания продукта
         public void CreateProduct(string name, decimal price, int count)
         {
             products.Add(new Product(name, price), count);
@@ -59,6 +64,7 @@ namespace zd2_Kuznetsovpr_23
             }
         }
 
+        //Метод для поиска по имени
         public Product FindByName(string name)
         {
             foreach (var product in products.Keys)
@@ -71,7 +77,7 @@ namespace zd2_Kuznetsovpr_23
             return null;
         }
 
-
+        //Метод продажи
         public void Sell(string ProductName)
         {
             Product ToSell = FindByName(ProductName);
@@ -85,11 +91,13 @@ namespace zd2_Kuznetsovpr_23
             }
         }
 
+        //Метод получения прибыли магазина
         public decimal GetProfit()
         {
             return allPrice;
         }
 
+        //Метод с перегрузкой получения прибыли магазина
         public decimal GetProfit(decimal nalog)
         {
             return allPrice - nalog;

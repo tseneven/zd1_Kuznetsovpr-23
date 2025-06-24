@@ -26,7 +26,9 @@ namespace zd3_Kuznetsov_pr_23
         {
             list = new List<Song>();
             currentIndex = 0;
-        }   
+        }
+
+        // Метод для получения текущей песни
         public Song CurrentSong()
         {
             if (list.Count > 0)
@@ -39,6 +41,7 @@ namespace zd3_Kuznetsov_pr_23
             list.Add(song);
         }
 
+        // Метод для получения песни по индексу
         public Song GetSongByIndex(int index)
         {
             if (list.Count > 0)
@@ -48,11 +51,13 @@ namespace zd3_Kuznetsov_pr_23
 
         }
 
+        // Метод удаления из плейлиста
         public void Delete(int i)
         {
             list.RemoveAt(i);
         }
 
+        // Метод удаления из плейлиста с перегрузкой
         public void Delete(string name)
         {
             for (int i = 0; i < list.Count; i++)
@@ -65,6 +70,7 @@ namespace zd3_Kuznetsov_pr_23
             }
         }
 
+        // Метод для очистки плейлиста
         public void ClearPl()
         {
             List.Clear();

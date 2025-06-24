@@ -51,6 +51,8 @@ namespace zd3_Kuznetsov_pr_23
             UpdateButton();
         }
 
+        // Кнопка перехода вперед
+
         private void button3_Click(object sender, EventArgs e)
         {
             listBox1.Items.Clear();
@@ -65,6 +67,7 @@ namespace zd3_Kuznetsov_pr_23
 
         }
 
+        // Кнопка перехода назад
         private void button2_Click(object sender, EventArgs e)
         {
             listBox1.Items.Clear();
@@ -79,6 +82,7 @@ namespace zd3_Kuznetsov_pr_23
 
         }
 
+        // Кнопка перехода по индексу
         private void Go_to_Button_Click(object sender, EventArgs e)
         {
             listBox1.Items.Clear();
@@ -107,6 +111,7 @@ namespace zd3_Kuznetsov_pr_23
 
         }
 
+        // Кнопка добавить в плейлист
         private void button1_Click(object sender, EventArgs e)
         {
             Playlist.Song song = new Playlist.Song();
@@ -126,12 +131,14 @@ namespace zd3_Kuznetsov_pr_23
             UpdateButton();
         }
 
+        // Метод для обновления кнопок перехода между песнями
         private void UpdateButton()
         {
             button2.Enabled = pl.CurrentIndex > 0;
             button3.Enabled = pl.CurrentIndex < pl.List.Count - 1;
         }
 
+        // Кнопка возврата в начало
         private void button4_Click(object sender, EventArgs e)
         {
             listBox1.Items.Clear();
@@ -146,6 +153,7 @@ namespace zd3_Kuznetsov_pr_23
             textBox4.Text = "";
         }
 
+        // Кнопка удаления песни из плейлиста
         private void button5_Click(object sender, EventArgs e)
         {
 
@@ -176,6 +184,7 @@ namespace zd3_Kuznetsov_pr_23
 
         }
 
+        // Кнопка очистки плейлиста
         private void button6_Click(object sender, EventArgs e)
         {
             pl.ClearPl();

@@ -20,6 +20,7 @@ namespace zd2_Kuznetsovpr_23
         public string Name { get => name; set => name = value; }
         public decimal Price { get => price; set => price = value; }
 
+        // Метод для получения информации о товаре
         public string GetInfo()
         {
             return $"Наименование: {Name}; Цена: {price}";

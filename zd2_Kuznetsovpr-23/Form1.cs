@@ -19,7 +19,7 @@ namespace zd2_Kuznetsovpr_23
             InitializeComponent();
         }
 
-
+        // Метод с загрузкой формы
         private void Form1_Load(object sender, EventArgs e)
         {
             pyaterochka = new Shop(listBox1);
@@ -31,6 +31,7 @@ namespace zd2_Kuznetsovpr_23
 
         }
 
+        //Кнопка продажи товара
         private void button1_Click(object sender, EventArgs e)
         {
             pyaterochka.Sell(textBox1.Text);
@@ -39,6 +40,7 @@ namespace zd2_Kuznetsovpr_23
             label7.Text = $"{pyaterochka.GetProfit(1000).ToString()} рублей";
         }
 
+        // Кнопка добавления товара
         private void button2_Click(object sender, EventArgs e)
         {
             product = new Product(textBox3.Text, Convert.ToDecimal(textBox4.Text));
