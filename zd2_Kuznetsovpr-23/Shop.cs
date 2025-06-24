@@ -14,7 +14,6 @@ namespace zd2_Kuznetsovpr_23
         private ListBox _listbox;
         private decimal allPrice;
 
-        public decimal AllPrice { get => allPrice;}
 
         public Shop(ListBox listBox)
         {
@@ -86,6 +85,14 @@ namespace zd2_Kuznetsovpr_23
             }
         }
 
-        
+        public decimal GetProfit()
+        {
+            return allPrice;
+        }
+
+        public decimal GetProfit(decimal nalog)
+        {
+            return allPrice - nalog;
+        }
     }
 }
